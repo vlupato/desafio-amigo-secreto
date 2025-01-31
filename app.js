@@ -19,3 +19,32 @@ function adicionarAmigo() {
   atualizarListaAmigos();
 }
 
+ // Função para atualizar a lista de amigos na tela
+
+function atualizarListaAmigos() {
+    let listaAmigos = document.getElementById("listaAmigos");
+    listaAmigos.innerHTML = "";
+  
+    amigos.forEach((amigo) => {
+      let li = document.createElement("li");
+      li.textContent = amigo;
+      listaAmigos.appendChild(li);
+    });
+  }
+  
+  // Função para sortear o amigo secreto
+  
+  function sortearAmigo() {
+    if (amigos.length === 0) {
+      alert("Nenhum amigo disponível para sortear.");
+    }
+  
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[indiceAleatorio];
+  
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `O seu amigo secreto é: ${amigoSorteado}`;
+    let voz =  resultado.innerHTML = `O seu amigo secreto é: ${amigoSorteado}`;
+    responsiveVoice.speak(voz, "Brazilian Portuguese Male", { rate: 1.2 });
+  }
+  
