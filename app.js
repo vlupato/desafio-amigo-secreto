@@ -1,11 +1,11 @@
 let amigos = [];
 
-// Cria função para adicionar amigos
+// Função para adicionar amigos na lista de array
 
 function adicionarAmigo() {
   let nomeDigitado = document.getElementById("amigo");
   let nomeDoAmigo = nomeDigitado.value;
-  console.log(nomeDoAmigo);
+  
 
   // Cria alerta para campo vazio
 
